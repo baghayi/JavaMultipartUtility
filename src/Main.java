@@ -29,8 +29,9 @@ public class Main {
     		multipart.setHeaders(headers);
     		
     		multipart.connect(resourceUri);
-    			
-			multipart.addFilePart("photo", file);
+    		
+    		String fieldName = "photo";
+			multipart.addFilePart(fieldName, file);
 
 			List<String> response = multipart.finish();
 
